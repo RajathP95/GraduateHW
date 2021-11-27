@@ -3,6 +3,14 @@ identifier name linter produces two output files
 - contain list of names and locations of all identifiers in the program.
 - name and location of all identifiers that violate the Simon Butler naming convention.
 
+## Setup:
+create a Languages folder and clone the following github repositories inside that:
+```sh
+git clone https://github.com/tree-sitter/tree-sitter-go
+git clone https://github.com/tree-sitter/tree-sitter-javascript
+git clone https://github.com/tree-sitter/tree-sitter-python
+```
+
 The code is built with following libraries:
 
 - [tree-sitter](https://tree-sitter.github.io/tree-sitter/)
