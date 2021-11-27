@@ -1,5 +1,5 @@
 from word2number import w2n
-# import enchant
+import enchant
 
 def namingConventionCheck(Identifier):
     
@@ -18,10 +18,10 @@ def namingConventionCheck(Identifier):
         failed_convention.append('Capitalization Anomaly')
     if "__" in Identifier:
         failed_convention.append('Consecutice Underscores')
-    # for i in temp:
-    #     d = enchant.Dict("en-US")
-    #     if len(i)!=0 and d.check(i) is False:
-    #         failed_convention.append('Dictonary Words')
+    for i in temp:
+        d = enchant.Dict("en-US")
+        if len(i)!=0 and d.check(i) is False:
+            failed_convention.append('Dictonary Words')
     if count > 4:
         failed_convention.append('Excessive Words')
     if Identifier.startswith("_") or Identifier.endswith("_"):
