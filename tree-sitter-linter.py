@@ -71,7 +71,6 @@ def main():
   identifier_details = {}
 
   for i in range(len(file_content_list)):
-      
     source = file_content_list[i].decoded_content
     file_path = file_content_list[i].path
 
@@ -92,9 +91,7 @@ def main():
 
       name_identifier = strList[line_number][start_index:end_index].decode('utf-8')
       failed_list = []
-      # print(name_identifier)
       failed_list = namingConventionCheck(name_identifier)
-      # print(failed_list)
       identifier_details = {
         "filepath" : file_path,
         "line_number" : line_number,
@@ -104,16 +101,6 @@ def main():
         "rules_violated" : failed_list
       }
       identifier_list.append(identifier_details)
-      
-
-  # names_list = []
-  # for i in range(len(identifier_list)):
-  #       names_list.append(identifier_list[i]['name'])
-  # # print(names_list)
-  # failed_list = []
-  # failed_list = namingConventionCheck(names_list)
-  # print(failed_list)
-  # print(identifier_list)
   
   fields = ['filepath', 'line_number', 'start_index', 'end_index','name']
   with open(filepath1, 'w', newline='') as f:
