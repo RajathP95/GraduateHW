@@ -9,6 +9,7 @@ create a Languages folder and clone the following github repositories inside tha
 git clone https://github.com/tree-sitter/tree-sitter-go
 git clone https://github.com/tree-sitter/tree-sitter-javascript
 git clone https://github.com/tree-sitter/tree-sitter-python
+git clone https://github.com/tree-sitter/tree-sitter-ruby
 ```
 
 The code is built with following libraries:
